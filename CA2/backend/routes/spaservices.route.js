@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const spaservicesRoute = express.Router();
 
-// Student model
+// Spa services model
 let Spaservices = require('../model/Spaservices');
 
 // Get all Spa services
-spaservicesRoute.route('/').get((req, res) => {
+spaservicesRoute.route('/users').get((req, res) => {
   Spaservices.find((error, data) => {
     if (error) {
       return next(error)

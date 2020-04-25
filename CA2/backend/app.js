@@ -37,9 +37,12 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cors());
+//static directory
 app.use(express.static(path.join(__dirname, 'dist/CA2')));
-app.use('/', express.static(path.join(__dirname, 'dist/CA2')));
-app.use('/api', studentRoute)
+//app.use('/', express.static(path.join(__dirname, 'dist/CA2')));
+
+//restful API root
+app.use(require('../backend/routes/spaservices.route'));
 
 // Create port
 const port = process.env.PORT || 4000;
@@ -49,10 +52,10 @@ const server = app.listen(port, () => {
 
 
 // Find 404 and hand over to error handler
-app.use((req, res, next) => {
-  console.log(res)
-  next(createError(404));
-});
+// app.use((req, res, next) => {
+//   //console.log(req)
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function (err, req, res, next) {

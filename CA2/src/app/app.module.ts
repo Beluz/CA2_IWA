@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpaserviceComponent } from './components/spaservice/spaservice.component';
 
+/* Angular 8 CRUD services */
+import { ApiService } from './shared/api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,6 @@ import { SpaserviceComponent } from './components/spaservice/spaservice.componen
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ApiService]
 })
 export class AppModule { }
