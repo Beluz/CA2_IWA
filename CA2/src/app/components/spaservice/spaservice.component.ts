@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spaservice.component.css']
 })
 export class SpaserviceComponent implements OnInit {
-  spaservice;
-  constructor(
-    private getSpaService: GetSpaServicesService,
-  ) { }
+  spa;
+
+  constructor(private getSpaService: GetSpaServicesService) { }
 
   ngOnInit(): void {
-    this.spaservice = this.getSpaService.getAll();
+    this.spa = this.getSpaService.getAll();
   }
 
 }

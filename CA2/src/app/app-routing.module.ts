@@ -5,7 +5,7 @@ import { SpaserviceComponent } from './components/spaservice/spaservice.componen
 
 const routes: Routes = [
   { path: '', component: SpaserviceComponent },
-  { path: 'users/:userId', component: SpaserviceComponent },
+  //{ path: 'spaservice', component: SpaserviceComponent },
 ];
 
 @NgModule({
