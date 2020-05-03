@@ -39,12 +39,16 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 //static directory
-app.use(express.static(path.join(__dirname, 'dist/CA2IWA')));
-app.use('/', express.static(path.join(__dirname, 'dist/CA2IWA')));
+app.use(express.static(path.join(__dirname, '/dist/CA2IWA')));
+app.use('/', express.static(path.join(__dirname, '/dist/CA2IWA/backend')));
 //app.use('/spaservices', spaserviceRoute)
 ///// NEED TO MAKE THE CONNECTION MONGO AND ANGULAR
 //restful API root
 app.use(require('../backend/routes/spaservices.route'));
+
+// app.get('/*', function(req,res) {
+// res.sendFile(path.join(__dirname+'/dist/CA2IWA/index.html'));
+// });
 
 // Create port
 const port = process.env.PORT || 3000;
