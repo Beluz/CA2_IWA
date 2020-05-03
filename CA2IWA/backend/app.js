@@ -32,6 +32,7 @@ const spaserviceRoute = require('../backend/routes/spaservices.route')
 const app = express();
 //var server = http.createServer(app);
 
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
@@ -46,7 +47,7 @@ app.use('/', express.static(path.join(__dirname, 'dist/CA2IWA')));
 app.use(require('../backend/routes/spaservices.route'));
 
 // Create port
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
