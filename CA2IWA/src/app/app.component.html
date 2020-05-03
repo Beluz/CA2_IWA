@@ -1,0 +1,44 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">bezKoder</a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="spaservice" class="nav-link">Spa Services</a>
+      </li>
+
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Toolbar -->
+
+<!-- <mat-toolbar color="primary" class="header">
+  <div>Services Records</div>
+  <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+</mat-toolbar> -->
+
+<!-- <mat-sidenav-container>
+  Sidenav
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+    [fixedTopGap]>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" routerLink="/spaservice">
+        <mat-icon>add</mat-icon> Add Spa service
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/spaservice">
+        <mat-icon>format_list_bulleted</mat-icon> View Services
+      </a>
+    </mat-nav-list>
+  </mat-sidenav> -->
+
+  <!-- Main content -->
+  <!-- <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
